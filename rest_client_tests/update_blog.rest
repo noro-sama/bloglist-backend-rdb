@@ -1,0 +1,9 @@
+PUT http://localhost:3070/api/blogs/3
+Content-Type: application/json
+
+{
+  "title": "How to crochet",
+  "author": "Roxie Mayn",
+  "url": "example.com/blogs/6333",
+  "likes": 5
+}

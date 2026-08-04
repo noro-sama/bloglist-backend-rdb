@@ -1,20 +1,20 @@
-const express = require('express');
-const app = express();
+const app = require('./app');
+const config = require('./utils/config');
+const logger = require('./utils/logger');
 
 const { PORT } = require('./utils/config');
 const { connectToDatabase } = require('./utils/db');
 
-const blogsRouter = require('./controllers/blogs');
-
-app.use(express.json());
-
-app.use('/api/blogs', blogsRouter);
-
 const start = async () => {
-  await connectToDatabase();
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
+  try {
+    await connectToDatabase();
+    app.listen(PORT, () => {
+      logger.info(`Server running on port ${PORT}`);
+    });
+  } catch (error) {
+    logger.error('Error connecting to Sequelize:', error.message);
+    process.exit(1);
+  }
 };
 
 start();
