@@ -2,6 +2,6 @@ POST http://localhost:3070/api/blogs/
 Content-Type: application/json
 
 {
-  "title": "How to bake a cake", "author": "Emori Hunter",
-  "url": "example.com/6890"
+  "title": "How to crochet", "author": "Roxie Mayn",
+  "url": "example.com/blogs/6333"
 }
