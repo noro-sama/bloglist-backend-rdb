@@ -14,11 +14,26 @@ User.init(
     username: {
       type: DataTypes.STRING,
       unique: true,
+      validate: {
+        isEmail: {
+          msg: 'username must be a valid email address',
+        },
+      },
       allowNull: false,
+    },
+    hashedPassword: {
+      type: DataTypes.STRING(60),
+      validate: {
+        len: [60, 60],
+        is: /^[./0-9A-Za-z$]+$/,
+      },
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: [3, 25],
+      },
     },
   },
   {
