@@ -1,9 +1,9 @@
 POST http://localhost:3070/api/blogs/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJveGllQG1heW5lLmNvbSIsImlkIjozLCJpYXQiOjE3ODU5NTU2MzR9.UE78FraArNir6pNMLlKpA2epCMDlT47dGdp-zeo0gEI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJAdGVzdC5jb20iLCJpZCI6OCwiaWF0IjoxNzg2MTMyNzY3fQ.uvtp4_xoCXhG5HrP2a0iBMWXG6JrtnGGFeldUQfKJV4
 
 {
-  "title": "How to create a reusable button",
-  "author": "Jen Selter",
-  "url": "example.com/blogs/923"
+  "title": "Beginner Notion Guide",
+  "author": "Peeta Mellark",
+  "url": "example.com/blogs/2086"
 }
